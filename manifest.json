@@ -1,0 +1,22 @@
+{
+    "name": "Medialab Code-A-Cola",
+    "short_name": "Medialab-code-a-cola",
+    "start_url": ".",
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "src/images/logo180.png",
+            "sizes": "180x180",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "src/images/logo512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}
