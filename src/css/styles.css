@@ -2,6 +2,18 @@
     --yellow: #f3be18;
     --white: #ffffff;
     --black: #000000;
+
+    --font-xxlarge: 40px;
+    --font-xlarge: 32px;
+    --font-large: 24px;
+    --font-reg: 16px;
+    --font-small: 8px;
+
+    --xxlarge: 40px;
+    --xlarge: 32px;
+    --large: 24px;
+    --reg: 16px;
+    --small: 8px;
 }
 
 .nav {
@@ -41,4 +53,47 @@ a {
 section {
     width: 100%;
     height: 80vh;
+}
+
+.header {
+    font-size: var(--font-xlarge);
+    font-weight: bold;
+    text-align: center;
+    padding: var(--xlarge);
+}
+
+.templates {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 80%;
+    margin: auto;
+    gap: var(--large);
+    padding-bottom: var(--reg);
+    position: relative;
+    
+}
+.post{
+    margin: var(--reg);
+    height: 200px ;
+    width: 100% ;
+    margin-bottom: 100px;
+}
+
+.post_title {
+    font-size: var(--large);
+    font-weight: 600;
+    margin-bottom: var(--small);
+}
+
+.post_description {
+    font-size: var(--reg);
+    margin-top: var(--small);
+    margin-bottom: var(--small);
+
+}
+
+.post_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
