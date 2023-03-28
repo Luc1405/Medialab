@@ -1,9 +1,10 @@
 <?php
 include "includes/config.php";
-$conn = openC on();
+$conn = openCon();
 session_start();
 
 $email = '';
+$name = '';
 $password = '';
 
 if (isset($_POST['submit'])) {
@@ -12,6 +13,7 @@ if (isset($_POST['submit'])) {
     //Postback with the data showed to the user, first retrieve data from 'Super global'
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $password = $_POST['password'];
+    $name = $_POST['name'];
 
     $errors = [];
     if ($email == '') {
@@ -20,11 +22,14 @@ if (isset($_POST['submit'])) {
     if ($password == '') {
         $errors['password'] = 'The password cannot be empty';
     }
+    if ($name == '') {
+        $errors['name'] = 'The password cannot be empty';
+    }
 
     if (empty($errors)) {
         $password = password_hash($password, PASSWORD_DEFAULT);
 
-        $query = "INSERT INTO users (username, password) VALUES('$email', '$password')";
+        $query = "INSERT INTO users (email, name, password) VALUES('$email', '$name', '$password')";
         $result = mysqli_query($conn, $query)
         or die('Error: ' . $query);
 
@@ -47,7 +52,7 @@ if (isset($_POST['submit'])) {
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="src/style.css">
+    <link rel="stylesheet" type="text/css" href="src/css/style.css">
     <title>Document</title>
 </head>
 <body>

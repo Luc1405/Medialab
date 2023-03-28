@@ -30,12 +30,12 @@ if (isset($_POST['submit'])) {
         if (password_verify($password, $user['password'])) {
             //Set email for later use in Session
             $_SESSION['loggedInUser'] = [
-                'name' => $user['name'],
+                'email' => $user['email'],
                 'id' => $user['id']
             ];
 
             //Redirect to secure.php & exit script
-            header("Location: index.php");
+            header("Location: test.php");
             exit;
         } else {
             $errors[] = 'Incorrect login data';
@@ -54,7 +54,7 @@ if (isset($_POST['submit'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="src/css/styles.css" rel="stylesheet" />
-    <title>Medialab - planner</title>
+    <title>Medialab</title>
 </head>
 <body>
 <h1>Login</h1>
@@ -64,15 +64,11 @@ if (isset($_POST['submit'])) {
         <input id="email" value="<?= (isset($email) ? $email : ''); ?>"/>
     </div>
     <div>
-        <label for="name">Naam</label>
-        <input type="name" name="name" id="name"/>
-    </div>
-    <div>
         <label for="password">Wachtwoord</label>
         <input id="password"/>
     </div>
-    <div>
-        <input value="Login"/>
+    <div class="data-submit">
+        <input type="submit"value="Save"/>
     </div>
 </form>
 </body>
