@@ -8,8 +8,6 @@ $name = '';
 $password = '';
 
 if (isset($_POST['submit'])) {
-    //Require database in this file & image helpers
-
     //Postback with the data showed to the user, first retrieve data from 'Super global'
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $password = $_POST['password'];
@@ -23,13 +21,13 @@ if (isset($_POST['submit'])) {
         $errors['password'] = 'The password cannot be empty';
     }
     if ($name == '') {
-        $errors['name'] = 'The password cannot be empty';
+        $errors['name'] = 'The name cannot be empty';
     }
 
     if (empty($errors)) {
         $password = password_hash($password, PASSWORD_DEFAULT);
 
-        $query = "INSERT INTO users (email, name, password) VALUES('$email', '$name', '$password')";
+        $query = "INSERT INTO `users` (email, name, password) VALUES('$email', '$name', '$password')";
         $result = mysqli_query($conn, $query)
         or die('Error: ' . $query);
 
@@ -57,24 +55,24 @@ if (isset($_POST['submit'])) {
 </head>
 <body>
 <h2>Nieuwe gebruiker registeren</h2>
-<form action="<?= $_SERVER['REQUEST_URI']; ?>" method="post" enctype="multipart/form-data">
+<form action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
     <div class="data-field">
         <label for="email">E-mail</label>
-        <input id="email" value="<?= $email ?>"/>
+        <input id="email" name="email" value="<?= $email ?>"/>
         <span class="errors"><?= isset($errors['email']) ? $errors['email'] : '' ?></span>
     </div>
     <div class="data-field">
         <label for="name">Name</label>
-        <input id="name"/>
+        <input name="name" id="name"/>
         <span class="errors"><?= isset($errors['name']) ? $errors['name'] : '' ?></span>
     </div>
     <div class="data-field">
         <label for="password">Password</label>
-        <input id="password"/>
+        <input name="password" id="password"/>
         <span class="errors"><?= isset($errors['password']) ? $errors['password'] : '' ?></span>
     </div>
     <div class="data-submit">
-        <input type="submit"value="Save"/>
+        <input name="submit" type="submit" value="Save"/>
     </div>
 </form>
 </body>

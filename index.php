@@ -5,7 +5,7 @@ $conn = openCon();
 
 //Check if user is logged in, else move to secure page
 if (isset($_SESSION['loggedInUser'])) {
-    header("Location: index.php");
+    header("Location: test.php");
     exit;
 }
 
@@ -61,14 +61,14 @@ if (isset($_POST['submit'])) {
 <form id="login" method="post" action="<?= $_SERVER['REQUEST_URI']; ?>">
     <div>
         <label for="email">E-mail</label>
-        <input id="email" value="<?= (isset($email) ? $email : ''); ?>"/>
+        <input id="email" name="email" value="<?= (isset($email) ? $email : ''); ?>"/>
     </div>
     <div>
         <label for="password">Wachtwoord</label>
-        <input id="password"/>
+        <input name="password" id="password"/>
     </div>
     <div class="data-submit">
-        <input type="submit"value="Save"/>
+        <input name="submit" type="submit"value="Save"/>
     </div>
 </form>
 </body>
