@@ -2,6 +2,7 @@
     --yellow: #f3be18;
     --white: #ffffff;
     --black: #000000;
+    --gray: #E9EAEE;
 
     --font-xxlarge: 40px;
     --font-xlarge: 32px;
@@ -50,11 +51,6 @@ a {
     color: var(--white);
 }
 
-section {
-    width: 100%;
-    height: 80vh;
-}
-
 .header {
     font-size: var(--font-xlarge);
     font-weight: bold;
@@ -62,38 +58,69 @@ section {
     padding: var(--xlarge);
 }
 
-.templates {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 80%;
-    margin: auto;
-    gap: var(--large);
-    padding-bottom: var(--reg);
-    position: relative;
-    
-}
-.post{
-    margin: var(--reg);
-    height: 200px ;
-    width: 100% ;
-    margin-bottom: 100px;
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+body {
+  font-family: "Quicksand", sans-serif;
+  display: grid;
+  place-items: center;
+  background-color: var(--gray);
 }
 
-.post_title {
-    font-size: var(--large);
-    font-weight: 600;
-    margin-bottom: var(--small);
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin-block: 2rem;
+  gap: 2rem;
 }
 
-.post_description {
-    font-size: var(--reg);
-    margin-top: var(--small);
-    margin-bottom: var(--small);
+.card img {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: clamp(20rem, calc(20rem + 2vw), 22rem);
+  overflow: hidden;
+  box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 1em;
+  background: #ECE9E6;
+background: linear-gradient(to right, #FFFFFF, #ECE9E6);
 
 }
 
-.post_img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.card__body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.card__body h4 {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+.card__footer {
+  display: flex;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+.user {
+  display: flex;
+  gap: .5rem;
+}
+
+.user__image {
+  border-radius: 50%;
+}
+
+.user__info > small {
+  color: #666;
 }
