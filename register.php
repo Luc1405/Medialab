@@ -43,7 +43,7 @@ if (isset($_POST['submit'])) {
     }
 }
 ?>
-<!doctype html>
+<!-- <!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -76,4 +76,4 @@ if (isset($_POST['submit'])) {
     </div>
 </form>
 </body>
-</html>
+</html> -->
