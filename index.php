@@ -51,7 +51,7 @@ if (isset($_POST['submit'])) {
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="src/css/style.css">
         <link href="src/css/reset.css" rel="stylesheet" />
         <link href="src/css/styles.css" rel="stylesheet" />
         <link href="src/css/footer.css" rel="stylesheet" />
