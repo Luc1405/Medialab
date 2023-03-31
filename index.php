@@ -13,7 +13,6 @@ if (isset($_SESSION['loggedInUser'])) {
 if (isset($_POST['submit'])) {
     //Retrieve values (email safe for query)
     $email = mysqli_escape_string($conn, $_POST['email']);
-    $name = mysqli_escape_string($conn, $_POST['name']);
     $password = mysqli_escape_string($conn, $_POST['password']);
 
     //Get password & name from DB
@@ -35,7 +34,7 @@ if (isset($_POST['submit'])) {
             ];
 
             //Redirect to secure.php & exit script
-            header("Location: test.php");
+            header("Location: calendar.php");
             exit;
         } else {
             $errors[] = 'Incorrect login data';
