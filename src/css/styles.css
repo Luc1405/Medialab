@@ -1,0 +1,126 @@
+:root {
+    --yellow: #f3be18;
+    --white: #ffffff;
+    --black: #000000;
+    --gray: #E9EAEE;
+
+    --font-xxlarge: 40px;
+    --font-xlarge: 32px;
+    --font-large: 24px;
+    --font-reg: 16px;
+    --font-small: 8px;
+
+    --xxlarge: 40px;
+    --xlarge: 32px;
+    --large: 24px;
+    --reg: 16px;
+    --small: 8px;
+}
+
+.nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 68px;
+    background-color: var(--yellow);
+    padding: 4px 0px 4px 0px;
+}
+
+.btn-div {
+    padding-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 20px;
+    background-color: var(--black);
+    padding: 5px 20px 5px 20px;
+}
+
+.logo {
+    width: 200px;
+    height: 100%;
+    position: relative;
+    padding-left: 20px;
+}
+
+.button {
+    padding-right: 20px;
+    color: var(--white);
+}
+
+.header {
+    font-size: var(--font-xlarge);
+    font-weight: bold;
+    text-align: center;
+    padding: var(--xlarge);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+body {
+  font-family: "Quicksand", sans-serif;
+  display: grid;
+  place-items: center;
+  background-color: var(--gray);
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin-block: 2rem;
+  gap: 2rem;
+}
+
+.card img {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: clamp(20rem, calc(20rem + 2vw), 22rem);
+  overflow: hidden;
+  box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 1em;
+  background: #ECE9E6;
+background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+
+}
+
+.card__body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.card__body h4 {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+.card__footer {
+  display: flex;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+.user {
+  display: flex;
+  gap: .5rem;
+}
+
+.user__image {
+  border-radius: 50%;
+}
+
+.user__info > small {
+  color: #666;
+}
