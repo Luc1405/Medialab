@@ -8,10 +8,10 @@ const right = document.getElementById("right");
 const eventButton = document.getElementById("event");
 const pushButton = document.getElementById("push");
 
+let events = JSON.parse(localStorage.getItem("events") || "[]");
 
 getCurrentMonthDates();
 
-let events = JSON.parse(localStorage.getItem("events") || "[]");
 
 function getCurrentMonthDates() {
     const april = ['27 mrt', '28 mrt', '29 mrt', '30 mrt', '31 mrt', '01 apr', '02 apr', '03 apr', '04 apr', 
@@ -37,10 +37,10 @@ function showCurrentMonthDates(currentValue) {
     wrapper.appendChild(dayMonth);
 
     // console.log(currentValue);
-
-    for (let i = 0; i < events.length; i++) {
-        console.log(newEvent.date);
-    }
+   
+        for (let i = 0; i < events.length; i++) {
+            // console.log(newEvent.date);
+        }
 
     document.getElementById("days").appendChild(wrapper);
 };
