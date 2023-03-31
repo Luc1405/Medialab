@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="src/css/calendar.css">
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+    <body>  
+        <div id="header"></div>
+        <div class="month-picker">
+            <p class="month-picker-text">februari</p>
+            <p class="month-picker-text">maart&nbsp;&nbsp;&nbsp;</p>
+            <p class="month-picker-text-selected">april</p>
+            <p class="month-picker-text">mei&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            <p class="month-picker-text">juni&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        </div>
+        <div class="weekday-picker">
+            <p class="weekday-picker-text">ma</p>
+            <p class="weekday-picker-text">di</p>
+            <p class="weekday-picker-text">wo</p>
+            <p class="weekday-picker-text">do</p>
+            <p class="weekday-picker-text">vr</p>
+            <p class="weekday-picker-text">za</p>
+            <p class="weekday-picker-text">zo</p>
+        </div>
+
+        <div class="wrapper">
+            <div class="days" id="days">
+
+                <!-- These get added in the JavaScript -->
+
+                <!-- <div class="day">
+                    <p class="day-date"></p>
+                    <p class="day-month"></p>
+                </div>
+                <div class="day">
+                    <p class="day-date"></p>
+                    <p class="day-month"></p>
+                </div> -->
+
+            </div>
+        </div>
+        <div id="footer"></div>
+
+        <div class="modal" id="modal">
+            <div class="modal-content">
+
+                <div class="modal-wrapper-top">
+                    <img src="svg/close.svg" alt="Close the modal" class="close" id="close">
+                        <div class="modal-wrapper-top-secondary">
+                            <p class="modal-current-date" id="modal-current-date"></p>
+                        </div>
+                </div>
+               
+                <div class="modal-wrapper-bottom">
+                    <div class="events" id="events">
+
+                        <!-- These get added in the JavaScript -->
+
+                        <div class="event-single">
+                            <img class="event-single-svg" src="svg/item-yellow.svg">
+                            <p class="event-single-title"></p>
+                            <p class="event-single-time"></p>
+                        </div>
+
+                    </div>
+                    <div class="new-event">
+                        <div class="new-event-title">
+                            <p>Titel</p>
+                            <input type="text" id="input-title"></input>
+                        </div>
+                        <div class="new-event-starttime">
+                            <p>Starttijd</p>
+                            <input type="time" id="input-starttime"></input>
+                        </div>
+                        <div class="new-event-endtime">
+                            <p>Eindtijd</p>
+                            <input type="time" id="input-endtime"></input>
+                        </div>
+                        <div class="new-event-date">
+                            <p>Datum</p>
+                            <input type="date" id="input-date"></input>
+                        </div>
+
+                        <button id="event">Event toevoegen</button>
+
+                        <button id="push">Pushnotificatie</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <script src="js/calendar.js"></script>
+    </body>
+</html>
