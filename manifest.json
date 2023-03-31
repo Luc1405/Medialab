@@ -7,13 +7,13 @@
     "display": "standalone",
     "icons": [
         {
-            "src": "src/images/vh-180.png",
+            "src": "src/images/logo180.png",
             "sizes": "180x180",
             "type": "image/png",
             "purpose": "any maskable"
         },
         {
-            "src": "src/images/vh-512.png",
+            "src": "src/images/logo512.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "any maskable"
