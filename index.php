@@ -45,34 +45,6 @@ if (isset($_POST['submit'])) {
     }
 }
 ?>
-<!-- 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="src/css/styles.css" rel="stylesheet" />
-    <title>Medialab</title>
-</head>
-<body>
-<h1>Login</h1>
-<form id="login" method="post" action="<?= $_SERVER['REQUEST_URI']; ?>">
-    <div>
-        <label for="email">E-mail</label>
-        <input id="email" name="email" value="<?= (isset($email) ? $email : ''); ?>"/>
-    </div>
-    <div>
-        <label for="password">Wachtwoord</label>
-        <input name="password" id="password"/>
-    </div>
-    <div class="data-submit">
-        <input name="submit" type="submit"value="Save"/>
-    </div>
-</form>
-</body>
-</html> -->
 
 <html>
     <head>
@@ -118,7 +90,7 @@ if (isset($_POST['submit'])) {
                             <label class="label" for="password">Password:</label>
                             <input class="input" type="password" id="password" name="password">
                         </div>
-                        <input class="button" type="submit" value="submit">
+                        <input class="button" type="submit" name="submit" value="submit">
                         <a class="link" href="./register.php">Nog geen account? klik dan hier!</a> 
                     </form>
                 </div>

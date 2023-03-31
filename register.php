@@ -43,40 +43,6 @@ if (isset($_POST['submit'])) {
     }
 }
 ?>
-<!-- <!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="src/css/style.css">
-    <title>Document</title>
-</head>
-<body>
-<h2>Nieuwe gebruiker registeren</h2>
-<form action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
-    <div class="data-field">
-        <label for="email">E-mail</label>
-        <input id="email" name="email" value="<?= $email ?>"/>
-        <span class="errors"><?= isset($errors['email']) ? $errors['email'] : '' ?></span>
-    </div>
-    <div class="data-field">
-        <label for="name">Name</label>
-        <input name="name" id="name"/>
-        <span class="errors"><?= isset($errors['name']) ? $errors['name'] : '' ?></span>
-    </div>
-    <div class="data-field">
-        <label for="password">Password</label>
-        <input name="password" id="password"/>
-        <span class="errors"><?= isset($errors['password']) ? $errors['password'] : '' ?></span>
-    </div>
-    <div class="data-submit">
-        <input name="submit" type="submit" value="Save"/>
-    </div>
-</form>
-</body>
-</html> -->
 
 <html>
     <head>
@@ -88,7 +54,6 @@ if (isset($_POST['submit'])) {
         <link href="src/css/styles.css" rel="stylesheet" />
         <link href="src/css/footer.css" rel="stylesheet" />
 
-          <!-- font awesome icons -->
         <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"
         integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
         crossorigin="anonymous"></script>
@@ -129,7 +94,7 @@ if (isset($_POST['submit'])) {
                             <input class="input" type="text" id="name" name="name">
                             <span class="errors"><?= isset($errors['name']) ? $errors['name'] : '' ?></span>
                         </div>
-                        <input class="button" type="submit" value="Aanmaken"> 
+                        <input class="button" type="submit" name="submit" value="Aanmaken"> 
                     </form>
                 </div>
             </div>
