@@ -1,6 +1,9 @@
 footer {
     background-color: var(--yellow);
     padding: 4px 0px 4px 0px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 textarea {

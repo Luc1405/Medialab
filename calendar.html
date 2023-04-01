@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="src/css/reset.css" rel="stylesheet" />
+    <link href="src/css/styles.css" rel="stylesheet" />
+    <link href="src/css/footer.css" rel="stylesheet" />
+    <link href="src/css/calendar.css" rel="stylesheet">
+    <link rel="shortcut icon" href="#">
+
+    <!-- font awesome icons -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"
+        integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
+        crossorigin="anonymous"></script>
+
+    <title>Medialab - planner</title>
+</head>
+
+<body>
+    <nav class="nav">
+        <img class="logo" src="src/images/logo.png" />
+        <div class="btn-div">
+            <a class="button" href="/"> Logout </a>
+        </div>
+    </nav>
+        <div class="month-picker">
+            <p class="month-picker-text">februari</p>
+            <p class="month-picker-text">maart&nbsp;&nbsp;&nbsp;</p>
+            <p class="month-picker-text-selected">april</p>
+            <p class="month-picker-text">mei&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            <p class="month-picker-text">juni&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        </div>
+        <div class="weekday-picker">
+            <p class="weekday-picker-text">ma</p>
+            <p class="weekday-picker-text">di</p>
+            <p class="weekday-picker-text">wo</p>
+            <p class="weekday-picker-text">do</p>
+            <p class="weekday-picker-text">vr</p>
+            <p class="weekday-picker-text">za</p>
+            <p class="weekday-picker-text">zo</p>
+        </div>
+
+        <div class="wrapper">
+            <div class="days" id="days">
+
+                <!-- These get added in the JavaScript -->
+
+                <!-- <div class="day">
+                    <p class="day-date"></p>
+                    <p class="day-month"></p>
+                </div>
+                <div class="day">
+                    <p class="day-date"></p>
+                    <p class="day-month"></p>
+                </div> -->
+
+            </div>
+        </div>
+        <div id="footer"></div>
+
+        <div class="modal" id="modal">
+            <div class="modal-content">
+
+                <div class="modal-wrapper-top">
+                    <img src="svg/close.svg" alt="Close the modal" class="close" id="close">
+                        <div class="modal-wrapper-top-secondary">
+                            <p class="modal-current-date" id="modal-current-date"></p>
+                        </div>
+                </div>
+               
+                <div class="modal-wrapper-bottom">
+                    <div class="events" id="events">
+
+                        <!-- These get added in the JavaScript -->
+
+                        <div class="event-single">
+                            <img class="event-single-svg" src="svg/item-yellow.svg">
+                            <p class="event-single-title"></p>
+                            <p class="event-single-time"></p>
+                        </div>
+
+                    </div>
+                    <div class="new-event">
+                        <div class="new-event-title">
+                            <p>Titel</p>
+                            <input type="text" id="input-title"></input>
+                        </div>
+                        <div class="new-event-starttime">
+                            <p>Starttijd</p>
+                            <input type="time" id="input-starttime"></input>
+                        </div>
+                        <div class="new-event-endtime">
+                            <p>Eindtijd</p>
+                            <input type="time" id="input-endtime"></input>
+                        </div>
+                        <div class="new-event-date">
+                            <p>Datum</p>
+                            <input type="date" id="input-date"></input>
+                        </div>
+
+                        <button id="event">Event toevoegen</button>
+
+                        <button id="push">Pushnotificatie</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <footer>
+            <div class="rounded-social-buttons">
+                <a class="social-button facebook" href="https://www.facebook.com/" target="_blank"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a class="social-button twitter" href="https://www.twitter.com/" target="_blank"><i
+                        class="fab fa-twitter"></i></a>
+                <a class="social-button linkedin" href="https://www.linkedin.com/" target="_blank"><i
+                        class="fab fa-linkedin"></i></a>
+                <a class="social-button youtube" href="https://www.youtube.com/" target="_blank"><i
+                        class="fab fa-youtube"></i></a>
+                <a class="social-button instagram" href="https://www.instagram.com/" target="_blank"><i
+                        class="fab fa-instagram"></i></a>
+            </div>
+        </footer>
+        <script src="js/calendar.js"></script>
+    
+    </body>
+    
+    </html>
+
+        <script src="js/calendar.js"></script>
+    </body>
+</html>
