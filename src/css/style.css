@@ -1,5 +1,6 @@
 body{
     margin:0;
+    display: block !important;
 }
 .big-container{
     display: flex;
