@@ -1,5 +1,16 @@
 // DOM
 
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("serviceworker.js").then(registration => {
+        console.log("Serviceworker registered!");        
+    }).catch(error => {
+        console.log("ServiceWorker registration Failed!");
+        console.log(error);
+    })
+} else {
+    console.log("Geen serviceworker!");
+}
+
 let clickable;
 const modal = document.getElementById("modal");
 const closer = document.getElementById("close");
@@ -35,12 +46,6 @@ function showCurrentMonthDates(currentValue) {
     dayMonth.classList.add("day-month");
     dayMonth.innerHTML = currentValue.substr(3, 6);
     wrapper.appendChild(dayMonth);
-
-    // console.log(currentValue);
-   
-        for (let i = 0; i < events.length; i++) {
-            // console.log(newEvent.date);
-        }
 
     document.getElementById("days").appendChild(wrapper);
 };
@@ -174,5 +179,5 @@ eventButton.addEventListener("click", function() {
 });
 
 pushButton.addEventListener("click", function() {
-    window.alert("Geprankt!");
+    window.alert("Let op, we gaan over 10 minutes live op huddle!");
 });

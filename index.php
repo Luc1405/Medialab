@@ -55,6 +55,9 @@ if (isset($_POST['submit'])) {
         <link href="src/css/styles.css" rel="stylesheet" />
         <link href="src/css/footer.css" rel="stylesheet" />
 
+        <link rel="manifest" href="manifest.json">
+        <link rel="apple-touch-icon" href="src/images/vh-180.png">
+
           <!-- font awesome icons -->
         <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"
         integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
