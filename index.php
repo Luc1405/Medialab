@@ -5,7 +5,7 @@ $conn = openCon();
 
 //Check if user is logged in, else move to secure page
 if (isset($_SESSION['loggedInUser'])) {
-    header("Location: test.php");
+    header("Location: calendar.html");
     exit;
 }
 
