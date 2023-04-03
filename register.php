@@ -63,9 +63,9 @@ if (isset($_POST['submit'])) {
     <body>
         <nav class="nav">
             <img class="logo" src="src/images/logo.png" />
-            <div class="btn-div">
+            <!-- <div class="btn-div">
                 <a class="button" href="/"> Logout </a>
-            </div>
+            </div> -->
         </nav>
         <div class="big-container">
             <div class="line">
