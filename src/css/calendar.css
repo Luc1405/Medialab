@@ -1,13 +1,5 @@
-/* STYLING STARTS HERE */
-
-#header {
-    background-color: #F3BE18;
-    height: 100px;
-}
-
-#footer {
-    background-color: #F3BE18;
-    height: 60px;
+body {
+    display: block;
 }
 
 .month-picker {
@@ -177,6 +169,10 @@
 .event-single-svg {
     width: 50px;
     height: 100%;
+}
+
+.new-event {
+    margin-bottom: 10px;
 }
 
 #event,
