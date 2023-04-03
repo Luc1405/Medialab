@@ -179,5 +179,5 @@ eventButton.addEventListener("click", function() {
 });
 
 pushButton.addEventListener("click", function() {
-    window.alert("Geprankt!");
+    window.alert("Let op, we gaan over 10 minutes live op huddle!");
 });
