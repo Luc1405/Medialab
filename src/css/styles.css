@@ -47,8 +47,8 @@ a {
 }
 
 .button {
-    padding-right: 20px;
     color: var(--white);
+    margin-right: 20px;
 }
 
 .header {

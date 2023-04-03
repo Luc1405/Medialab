@@ -34,7 +34,7 @@ if (isset($_POST['submit'])) {
             ];
 
             //Redirect to secure.php & exit script
-            header("Location: calendar.php");
+            header("Location: calendar.html");
             exit;
         } else {
             $errors[] = 'Incorrect login data';
